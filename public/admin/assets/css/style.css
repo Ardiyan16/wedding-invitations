@@ -44,6 +44,7 @@ h6 {
   margin-top: 60px;
   padding: 20px 30px;
   transition: all 0.3s;
+  background-color: #caf0f8;
 }
 
 @media (max-width: 1199px) {
@@ -381,7 +382,7 @@ h6 {
 }
 
 .logo img {
-  max-height: 26px;
+  max-height: 200px;
   margin-right: 6px;
 }
 
@@ -626,7 +627,7 @@ h6 {
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
+  background-color: #00072D;
 }
 
 @media (max-width: 1199px) {
@@ -649,6 +650,8 @@ h6 {
 
   #main,
   #footer {
+    background-color: #caf0f8;
+    margin-left: 300px;
     margin-left: 300px;
   }
 }

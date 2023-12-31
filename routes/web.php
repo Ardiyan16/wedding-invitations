@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//controller
+use App\Http\Controllers\AdminController;
+
+//middleware
+use App\Http\Middleware\IsGuest;
+use App\Http\Middleware\IsAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +19,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(IsGuest::class)->group(function(){
+    Route::get('/', [AdminController::class, 'login'])->name('login');
+});
+
+Route::middleware(IsAdmin::class)->group(function(){
+    Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
+
+    Route::prefix('admin-wedding')->group(function() {
+        Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+        Route::get('/template-undangan', [AdminController::class, 'template'])->name('template');
+        Route::get('/data-pengantin', [AdminController::class, 'pengantin'])->name('pengantin');
+    });
+
 });
