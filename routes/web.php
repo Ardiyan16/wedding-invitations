@@ -30,6 +30,7 @@ Route::middleware(IsAdmin::class)->group(function(){
         Route::get('/', [AdminController::class, 'index'])->name('dashboard');
         Route::get('/template-undangan', [AdminController::class, 'template'])->name('template');
         Route::get('/data-pengantin', [AdminController::class, 'pengantin'])->name('pengantin');
+        Route::get('/data-bank', [AdminController::class, 'bank'])->name('bank');
     });
 
 });

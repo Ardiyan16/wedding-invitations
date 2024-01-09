@@ -39,4 +39,10 @@ class AdminController extends Controller
         return view('admin.pengantin', $var);
     }
 
+    public function bank()
+    {
+        $var['title'] = 'Bank';
+        return view('admin.bank', $var);
+    }
+
 }

@@ -109,7 +109,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link " href="{{ url('/admin-wedding') }}">
+            <a class="nav-link collapsed" href="{{ url('/admin-wedding') }}">
             <i class="fa fa-dashboard"></i>
             <span>Dashboard</span>
             </a>
@@ -124,14 +124,14 @@
         </li><!-- End Profile Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-faq.html">
+            <a class="nav-link collapsed" href="{{ url('/admin-wedding/data-pengantin') }}">
             <i class="fa fa-user-group"></i>
             <span>Pengantin</span>
             </a>
         </li><!-- End F.A.Q Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-contact.html">
+            <a class="nav-link collapsed" href="{{ url('/admin-wedding/data-bank') }}">
             <i class="fa fa-building"></i>
             <span>Data Bank</span>
             </a>
